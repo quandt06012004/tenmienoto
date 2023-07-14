@@ -1,0 +1,1344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--body-font);
+    font-style: normal;
+    font-size: 16px;
+}
+i::selection{
+    color: yellow;
+}
+header{ 
+    font-family: var(--body-font);
+    background-color: black;
+    color: white;
+    position: relative;
+}
+header .posin{
+    position: fixed;
+    background-color: gray;
+    top: 0px;
+    right: 0px;
+    width: 20%;
+    height: 100%;
+    bottom: 0;
+}
+header .box{
+    align-items: center;
+    padding: 10px 0;
+}
+header .box ul{
+    margin-bottom: 0 !important;
+    display: flex;
+    list-style: none;
+}
+header .box a{
+    color: white;
+    align-items: center;
+    justify-content: flex-end;
+}
+header .box a.icon1 i{
+    color: rgb(241, 37, 37);
+}
+header .box ul li a span{
+    margin: 0 10px;
+}
+header .box .header-right {
+    justify-content: flex-end;
+}
+header .box a.icon i{
+    font-size: 20px;
+    margin-right: 4px;
+}
+header .header-link a{
+    margin-right: 10px;
+}
+header .header-right .header-link{
+    margin-right: 30px;
+}
+header .box .header-right .header-follow a i{
+    margin: 0 8px;
+    font-size: 16px; 
+}
+header .header-con .box .header-right .header-link a:hover{
+    color: red;
+}
+header .header-con .box .header-right .header-follow i:hover{
+    color: red;
+}
+.header-con::before {
+    content: "";
+    position: absolute;
+    background: rgb(205, 8, 8);
+    clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
+    width: 10%;
+    top: 0;
+    left: 0;
+    bottom: -1px;
+    z-index: 1;
+}
+.header-con::after {
+    content: "";
+    position: absolute;
+    background: rgb(205, 8, 8);
+    clip-path: polygon(20% 1%, 100% 0, 100% 100%, 0% 100%);
+    width: 10%;
+    top: 0;
+    right: 0;
+    bottom: -1px;
+    z-index: 1;
+}
+.menu{
+    padding: 5px 0;
+    font-family: var(--body-font);
+}
+.menu .thang .nav-thon{
+    display: none;
+}
+.menu .nav-logo img{
+    width: 90%;
+    margin-left: 20px;
+}
+.menu .nav-menu a{
+    font-weight: bold;
+    color: black;
+}
+.menu .nav-right{
+    align-items: center;
+    justify-content: flex-end;
+}
+.menu .nav-right .gio{
+    position: relative;
+}
+.menu .nav-right .gio span{
+    background-color: rgb(205, 8, 8);
+    padding: 1px 6px;
+    border-radius: 50px;
+    font-size: 10px;
+    position: absolute;
+    color: white;
+    right: 12px;
+    top: -14px;
+    cursor: pointer;
+}
+.menu .nav-right .gio i{
+    color: rgb(205, 8, 8);
+    font-size: 23px;
+    margin-right: 20px;
+}
+.menu .nav-right .gio i:hover{
+    color: red;
+}
+.menu .nav-right .gio span:hover{
+    transform: rotateZ(30deg);
+    background-color: red;
+}
+.menu .nav-right .add-car .add i{
+    font-size: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 4px 5px;
+    margin-right: 1px;
+}
+.menu .nav-right .add-car .add{
+    padding: 10px 12px;
+    background-color: rgb(205, 8, 8);;
+    border-radius: 10px;
+    position: absolute;
+    left: -20px;
+    top: 2px;
+}
+.menu .nav-right .add-car{
+    border: 2px solid rgb(141, 22, 22);
+    border-radius: 10px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    width: 142px;
+    height: 52px;
+    margin-right: 15px;
+}
+.menu .thang .dropdown-menu{
+    background-color: rgb(237, 94, 94);
+}
+.menu .thang .dropdown-menu a.dropdown-item{
+    color: white;
+}
+.menu .thang .dropdown-menu a.dropdown-item:hover{
+    background-color: brown;
+}
+.menu .nav-right .add-car .add:hover{
+    left: 1px;
+    background-color: red;
+    transition: 0.8s;
+}
+.menu .thang .nav-menu ul li.dropdown:hover .dropdown-menu{
+    display: block;
+}
+.menu .thang .nav-menu ul li.dropdown:active{
+    background-color: brown !important;
+    border-radius: 5px;
+}
+.menu .thang .nav-menu ul a.big:hover{
+    color: rgb(216, 82, 82);
+}
+.pin-menu{
+    position: fixed;
+    top: 0;
+    right: auto;   
+    left: auto;
+    width: 100%;
+    z-index: 15;
+    animation: fadeInDown 1s forwards;
+    background-color: white;
+}
+.menu .nav-right.tum{
+    display: none;
+}
+@-webkit-keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(-20px);
+      transform: translateY(-20px);
+    }
+  
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0);
+      transform: translateY(0);
+
+    }
+}
+.car .carousel-item{
+    overflow: hidden;
+    height: 650px;
+}
+.car .carousel-item img{
+    width: 100%;
+}
+.car .carousel-item{
+    position: relative;
+}
+.car img.oto{
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%; 
+    transform: translateY(-40%);
+}
+.car .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #fff;
+    text-align: left;
+    width: 50%;
+    font-family: var(--body-font);
+    transform: translateY(-60%);
+}
+.car .carousel-caption span{
+    color: red;
+
+}
+.car .carousel-caption h6{
+    color:red;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.car .carousel-caption h1{
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.car .carousel-caption p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.car .carousel-caption a.pro{
+    display: inline-block;
+    margin-top: 30px;
+    background-color: rgb(210, 15, 15);
+    color: white;
+    font-weight: 400px;
+    border: none;
+}
+.car .carousel-caption a.pro:hover{
+    background-color: darkred;
+}
+.car .bao::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -0.5px;
+        top: 0;
+        background: rgb(10, 0, 0, 0.9);
+        opacity: 0.85;
+        z-index: 0;
+}
+.car {
+    position: relative;
+}
+
+.about .about-img img{
+    width: 95%;
+    margin-left: 40px;
+
+}
+.about .about-img{
+    position: relative;
+    font-family: var(--body-font);
+}
+.about .tin{
+    position: absolute;
+    left: 75px;
+    top: 20px;
+    align-items: center;
+    background-color: black;
+    padding: 7px 15px;
+    border-radius: 10px;
+    color: white;
+}
+.seach .container{
+    background-color: beige;
+    border-radius: 15px;
+}
+.seach legend{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.seach .form-group label{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 400;
+    outline: none;
+}
+.seach .form-group select{
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    margin-bottom: 30px;
+    border: 1px solid gray;
+    outline: none;
+    height: 50px;
+
+}
+.seach .form-group button{
+    background-color: rgb(166, 20, 20);
+    border: none;
+    padding: 15px;
+    width: 100%;
+    margin-top: 30px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+.seach .form-group button i{
+    font-size: 20px;
+    margin-right: 10px;
+}
+.about .about-img .tin i{
+    font-size: 40px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgb(177, 21, 21);
+}
+.about .about-text{
+    padding: 30px;
+    margin-left: 30px;
+}
+.about .about-text h6{
+    color: red;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+.about .about-text small{
+    color: darkgrey;
+    line-height: 30px;
+}
+.about .about-text h6 i{
+    font-size: 20px;
+}
+.about .about-text h2{
+    font-size: 45px;
+    font-weight: 700;
+}
+.about .about-text h2 small{
+    color: red !important;
+}
+.about .about-text p{
+    font-weight: bold;
+    color: gray;
+}
+.about .about-text p.vi{
+    margin-top: 15px;
+}
+.about .about-text p i{
+    color: red !important;
+    margin-right: 5px;
+}
+.about .about-text a.tan{
+    background-color: red;
+    border-radius: 10px;
+}
+.counter {
+    padding: 50px;
+    background-color: rgb(228, 43, 43);
+    background-image: url('image/0111.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left center;
+    position: relative;
+}
+.counter .san{
+    text-align: center;
+}
+.counter .san i{
+    font-size: 80px;
+    padding: 18px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+    border: 4px solid white !important;
+}
+.counter .san p{
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+.counter .san span{
+    font-weight: bold;
+    color: rgb(219, 218, 218);
+    font-size: 20px;
+}
+.counter .counter-con::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -0.5px;
+        top: 0;
+        background: rgb(100, 0, 0, 0.9);
+        opacity: 0.85;
+        z-index: 0;
+}
+
+.let-check .let-check-top{
+    margin-bottom: 30px;
+}
+.let-check .let-check-top strong{
+    color: red;
+    display: block;
+    text-align: center;
+    position: relative;
+}
+.let-check .let-check-bottom .loter span{
+    padding: 2px 10px;
+    background-color: rgb(32, 169, 32);
+    border-radius: 7px;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+}
+.let-check .let-check-top strong i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+.let-check .let-check-top h2{
+    font-size: 40px;
+    font-weight: 600;
+    text-align:  center;
+}
+.let-check .let-check-bottom .check-trong{
+    padding: 10px;
+    background-color: rgb(240, 231, 231);
+    border-radius: 15px;
+    margin-top: 27px;
+}
+.let-check .let-check-bottom .check-trong img{
+    border-radius: 9px;
+    margin-bottom: 15px;
+}
+.let-check .let-check-bottom .check-trong .bon1 a{
+    font-weight: bold;
+    font-size: 18px;
+}
+.let-check .let-check-bottom .check-trong .bon2 span{
+    color: gray;
+    font-size: 14px;
+}
+.let-check .let-check-bottom .check-trong .bon2 span i{
+    color: yellow;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.let-check .let-check-bottom .check-trong .bon3 span{
+    color: gray;
+}
+.let-check .let-check-bottom .check-trong .bon3 span i{
+    color: red !important;
+    font-size: 18px;
+    margin-right: 6px;
+}
+.let-check .let-check-bottom .check-trong .bon3 span.so-1{
+    margin-right: 5px;
+}
+.let-check .let-check-bottom .check-trong .dip{
+    margin-top: 15px;
+}
+.let-check .let-check-bottom .check-trong .dip span{
+    font-size: 20px;
+    margin-right: 50px;
+}
+.let-check .let-check-bottom .check-trong .dip .tyn{
+    padding: 3px 8px !important;
+    border-radius: 10px;
+}
+.car-by .by-top{
+    margin-bottom: 30px;
+}
+.car-by .by-top strong{
+    text-align: center;
+    display: block;
+    color: rgb(128, 34, 34);
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+.car-by .by-top strong i{
+    margin-right: 6px;
+}
+.car-by .by-top h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.car-by .by-top h2 span{
+    color: red;
+    padding: 10px 0;
+}
+.car-by .by-bottom .onchi .lo{
+    background-color: rgb(240, 237, 237);
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 10px 0;
+}
+.car-by .by-bottom .onchi .lo a{
+    text-decoration: none;
+}
+.car-by .by-bottom .onchi a img{
+    width: 70%;
+    margin: 0 auto;
+    display: block;
+}
+.car-by .by-bottom .onchi a h5{
+    text-align: center;
+    display:block;
+    color: black;
+    font-size: 18px;
+    font-weight: 540;
+    box-sizing: border-box;
+}
+.chan{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    z-index: 16;
+    transform: translate(-50%, -50%);
+    width: 70%;
+}
+.ngoai{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(15, 1, 1, 0.9);
+    z-index: 11;
+    display: none;
+}
+.ngoai.den{
+    display: block;
+}
+.sieu-xe i:hover{
+    color: violet;
+}
+.chan {
+    display: none;
+}
+.xuatHien{
+    display: block;
+}
+.choose{
+    background-color: rgb(29, 25, 25);
+    border-top: 4px solid gray;
+    padding: 30px;
+    margin-top: 30px;
+}
+.choose .choose-left{
+    color: white;
+    margin-top: 60px;
+    padding: 30px;
+}
+.choose .choose-left img{
+    width: 90%;
+    margin-left: 30px;
+}
+.choose .choose-left span{
+    font-weight: bold;
+}
+.choose .choose-left h2{
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: 10px;
+}
+.choose .choose-left h2 span{
+    color: red;
+}
+.choose .choose-left p{
+    font-weight: bold;
+}
+.choose .choose-right{
+    margin: auto;
+}
+.choose .choose-right .con-jon{
+    background-color: white;
+    padding: 40px 20px;
+    margin: 15px auto;
+    border-radius: 10px;
+    margin: 20px auto;
+
+}
+.choose .choose-right i{
+    color: red;
+    font-size: 40px;
+}
+.choose .choose-right i.bs{
+    margin-right: 155px;
+}
+.choose .choose-right h3{
+    font-weight: bold;
+    margin-top: 10px;
+}
+.choose .choose-right p{
+    color: gray;
+}
+.sieu-xe{
+    position: relative;
+}
+.sieu-xe img{
+    width: 100%;
+}
+.sieu-xe i{
+    font-size: 500%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+}
+.best .best-top strong {
+    color: red;
+    text-align: center;
+    display: block;
+}
+.best .best-top{
+    margin-bottom: 30px;
+}
+.best .best-top strong i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+.best .best-top h2{
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+.best .best-top h2 span{
+    color: red;
+}
+.best .best-bottom .bin-trong{
+    padding: 15px;
+    background-color: rgb(240, 233, 233);
+    border-radius: 15px;
+    position: relative;
+    margin-top: 35px;
+}
+.best .best-bottom .bin-trong .leater{
+    background-color: rgb(236, 189, 236);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.best .best-bottom .bin-trong .leater span{
+    color: white;
+    font-weight: bold;
+    background-color: rgb(193, 38, 38);
+    border-radius: 10px;
+    padding: 7px 12px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    transform: translate(-20%, -40%);
+}
+.best .best-bottom .bin-trong  a{
+    color: black;
+    text-decoration: none;
+}
+.best .best-bottom .bin-trong  .cun1 a{
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+.best .best-bottom .bin-trong  .cun2 a{
+    color: gray;
+
+}
+.best .best-bottom .bin-trong  .cun2 a i{
+    color: red;
+    margin-right: 4px;
+}
+.best .best-bottom .bin-trong  .cun2 a.may:hover{
+    color: red;
+}
+.popular .popular-top strong{
+    color: red;
+    text-align: center;
+    display: block;
+}
+.popular .popular-top strong i{
+    font-size: 18px;
+    margin-right: 6px;
+}
+.popular .popular-top h2{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.popular .popular-top h2 span{
+    color: red;
+}
+.popular .popular-bottom a{
+    text-decoration: none;
+    background-color: rgb(243, 241, 241);
+    display: block;
+    border-radius: 10px;
+}
+.popular .popular-bottom a h5{
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+.popular .popular-bottom a img{
+    width: 100%;
+}
+.client {
+    width: 100%;
+}
+.client .card{
+    border: none;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+.client .card img{
+    width: 35%;
+    border-radius: 50px;
+    border: 4px solid red;
+    margin-left: 15px;
+}
+.client .card .card-body h4{
+    font-weight: 720;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.client .card .card-body p{
+    color: red;
+    margin-bottom: 2px !important;
+    font-weight: bold !important;
+}
+.client .card .card-body span{
+    font-size: 17px;
+}
+.client .container .my-client i{
+    color: red !important;
+    margin-left: 5px;
+}
+.client .container .my-client p{
+    padding: 15px;
+}
+.client .client-top{
+    margin-bottom: 40px;
+}
+.client .client-top p{
+    text-align: center;
+    margin-bottom: 5px !important;
+    color: red;
+    font-weight: bold;
+}
+.client .client-top p i{
+    margin-right: 6px;
+}
+.client .client-top h2{
+    text-align: center;
+    font-weight: 600;
+    font-size: 35px;
+}
+.client .client-top h2 span{
+    color: red;
+    padding: 15px;
+}
+.latest .latest-top{
+    margin-bottom: 25px;
+}
+.latest .latest-top strong{
+    color: red;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+}
+.latest .latest-top strong i{
+    font-size: 20px;
+    margin-right: 6px;
+}
+.latest .latest-top h2{
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+}
+.latest .latest-top h2 span{
+    color: red;
+}
+.latest .latest-bottom .kho .kho-trong{
+    padding: 20px;
+    background-color: rgb(249, 243, 243);
+    border-radius: 10px;
+}
+.latest .latest-bottom .kho .kho-trong img{
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.latest .latest-bottom .kho .kho-trong a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 15px;
+}
+.latest .latest-bottom .kho .kho-trong a i{
+    margin-right: 8px;
+    color: red;
+    font-size: 18px;
+}
+.latest .latest-bottom .kho .kho-trong a.trong2{
+    margin-left: 15px ;
+}
+.latest .latest-bottom .kho .kho-trong a.trong3{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    display: block;
+}
+.map {
+    margin: 20px 0px;
+}
+.map .ctn-map::before {
+    content: "";
+    position: absolute;
+    background-image: url('image/map2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    opacity: 0.05;
+    height: 100%;
+    width: 100%;
+}
+.ctn-map{
+    width: 100%;
+    display: block;
+    background-color: rgb(250, 248, 248);
+    /* height: 100%; */
+    /* left: 0; */
+    /* z-index: 0;  */
+    position: relative;
+    padding: 15px;
+    border-radius: 15px;
+}
+.map img{
+    width: 100%;
+}
+.map .map-left{
+    padding: 0px 20px;
+    /* position: relative; */
+}
+.map .map-left span.tron{
+    color: rgb(233, 34, 34);
+    font-size: 20px;
+    font-weight: bold;
+}
+.map .map-left span i{
+    font-size: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+.map .map-left h2{
+    color: black;
+    font-weight: bold;
+    font-size: 40px;
+}
+.map .map-left h2 span {
+    color: red;
+}
+.map .map-left p{
+    color: gray;
+    font-weight: 200;
+    margin-top: 20px;
+    font-size: 17px;
+}
+.map .map-left a i{
+    margin-right: 10px;
+    font-size: 40px;
+}
+.map .map-left .nut{
+    display: flex;
+    padding: 0 18px;
+}
+.map .map-left a{
+    margin-top: 30px;
+    text-decoration: none;
+    align-items: center;
+    color: white;
+    background-color: red;
+    padding: 7px 10px;
+    border-radius: 15px;
+    padding: 5px 15px;
+    margin-bottom: 30px;
+}
+.map .map-left a.lip{
+    background-color: black;
+    margin-left: 20px;
+}
+.footer{
+    background-color: black;
+}
+.footer li{
+    list-style: none;
+}
+.footer .footer-top{
+    padding: 30px 50px 0;
+    justify-content: space-between;
+}
+.footer .footer-top .footer-logo img{
+    width: 80%;
+    margin-bottom: 25px !important;
+}
+.footer .footer-top .footer-logo p{
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px !important;
+}
+.footer .footer-top .footer-logo li{
+    margin-top: 10px;
+}
+.footer .footer-top .footer-logo span{
+    font-weight: bold;
+    color: white;
+}
+.footer .footer-top .footer-logo i{
+    color: white;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: red;
+    margin-right: 5px;
+    font-size: 15px;
+    margin-right: 10px;
+}
+.footer .footer-top .footer-logo i.xx{
+    padding: 6px 9px;
+}
+.footer .footer-top h4{
+    color: white;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 3px solid red;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.footer .footer-top a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.footer .footer-top li{
+    margin: 10px 0;
+}
+.footer .footer-top li i{
+    color: red;
+    margin-right: 5px;
+}
+.footer .footer-top li a:hover{
+    color: red;
+}
+.footer .footer-top .newslerter p{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.footer .footer-top .newslerter button{
+    background-color: red;
+    padding: 8px 20px;
+    width: 100%;
+    border: none;
+    margin-top: 10px;
+}
+.footer .footer-bottom {
+    align-items: center;
+    padding: 10px 50px;
+    position: relative;
+}
+.footer .footer-bottom .bottom-left p{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+}
+.footer .footer-bottom .bottom-left p span{
+    color: rgb(100, 10, 10);
+}
+.footer .footer-bottom .bottom-right{
+    text-align: end;
+    z-index: 2;
+}
+.footer .footer-bottom .bottom-left{
+    z-index: 2;
+}
+.footer .footer-bottom .bottom-right i{
+    font-size: 30px;
+    margin: 0 15px;
+    color: white;
+}
+.footer .footer-bottom .bottom-right i:hover{
+    color: rgb(68, 49, 212);
+}
+.bottom-con{
+    align-items: center;
+}
+.bottom-con::after {
+    content: "";
+    position: absolute;
+    background: rgb(205, 8, 8);
+    clip-path: polygon(10% 1%, 100% 0, 100% 100%, 0% 100%);
+    width: 60%;
+    top: 0;
+    right: 0;
+    bottom:  0px;
+    z-index: 1;
+}
+.team{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.team .team-top {
+    margin-bottom: 15px;
+}
+.team .team-top strong{
+    display: block;
+    text-align: center;
+    color: red;
+}
+.team .team-top strong i{
+    margin-right: 6px;
+}
+.team .team-top h2{
+    text-align: center;
+    font-size: 40;
+    font-weight: bold;
+}
+.team .team-top h2 span{
+    color: red;
+}
+.team .team-bottom img{
+    border-radius: 10px;
+    width: 100%;
+}
+.team .team-bottom a{
+    text-decoration: none;
+}
+.team .team-bottom h5{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: black !important;;
+}
+.team .team-bottom span{
+    text-align: center;
+    display: block;
+    color: red;
+    font-weight: bold;
+
+}
+.car-about{
+    position: relative;
+    margin-bottom: 20px;;
+    background-position: left center;
+    overflow: hidden;
+}
+.car-about img{
+    width: 100%;
+    height: auto;
+    background-size: cover;
+}
+.car-about .bun{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50px);
+    text-align: center;
+}
+.car-about .bun a{
+    color: white;
+    margin: 0 5px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+.car-about .bun h4{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+.car-about .bun a:hover{
+    color: cornflowerblue;
+}
+.pagination{
+    justify-content: center;
+}
+.khoa{
+    margin-top: 30px;
+}
+.owl-theme .owl-dots, .owl-theme .owl-nav {
+    display: none;
+}
+.khoa .sub-images{
+    margin-top: 20px;
+}
+.khoa .my-hot-product1 img{
+    border-radius: 10px;
+}
+.khoa .khoa-right{
+    background-color: rgb(142, 224, 147);
+    border-radius: 10px;
+    padding: 50px 100px;
+}
+.khoa .khoa-right h4{
+    text-align: center;
+    margin-top: 30px;
+    font-weight: bold;
+}
+.khoa .khoa-right span.toi{
+    display: block;
+    text-align: end;
+    margin: 20px 0px;
+}
+.khoa .khoa-right span i{
+    color: yellow;
+    font-size: 20px;
+}
+.khoa .khoa-right span.heo{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: end;
+    display: block;
+}
+.khoa .khoa-right a{
+    margin: 0 auto;
+    display: block;
+}
+.shop .shop-top{
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+.shop .shop-top p{
+    font-weight: bold;
+    font-size: 25px;
+}
+.shop .shop-top select{
+    outline: none;
+    padding: 15px 30px;
+    background-color: burlywood;
+    border-radius: 10px;
+}
+.shop .shop-bottom{
+    margin-bottom: 30px;
+}
+.shop .shop-bottom .lun img{
+    width: 100%;
+}
+.shop .shop-bottom .lun{
+    background-color: rgb(236, 223, 223);
+    padding: 15px 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.shop .shop-bottom .lun span{
+    display: block;
+    color: yellow;
+    text-align: center;
+    margin-top: 10px;
+}
+.shop .shop-bottom .lun span i{
+    font-size: 17px;
+}
+.shop .shop-bottom .lun h5{
+    text-align: center;
+    font-weight: 500;
+}
+.shop .shop-bottom .lun strong{
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
+.shop-cart img{
+    width: 50%;
+    padding: 7px;
+    background-color: rgb(235, 236, 236);
+    border-radius: 6px;
+}
+.donu{
+    width: 20%;
+    background-color: rgb(236, 233, 233);
+    margin: 30px 0;
+    padding: 20px;
+    border-radius: 15px;
+    font-weight: bold;
+}
+.donu .donu1{
+    margin-top: 20px;
+}
+.donu .donu1 {
+    justify-content: space-between;
+}
+.donu  a{
+    display: block;
+    margin-top: 20px;
+}
+.shop-cart table tbody td{
+    text-align: center;
+    font-weight: bold;
+}
+.shop-cart table tbody td.thim{
+    width: 30%
+}
+.contact{
+    margin: 20px 0;
+}
+.contact .contact-left img{
+    width: 100%;
+    border-radius: 10%;
+}
+.contact input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid black;
+}
+.contact button{
+    padding: 7px 15px;
+    border: none;
+    background-color: rgb(192, 46, 46);
+    border-radius: 10px;
+    width: 100px;
+}
+.contact h2{
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.contact span{
+    color: gray;
+}
+ .item.rim{
+    border: 2px solid red;
+}
+.embed-responsive-item{
+    height: 600px !important;
+}
+.let-check-bottom .bh{
+    justify-content: center;
+}
+@media screen and (max-width: 820px) {
+    header{
+        display: none;
+    }
+    .menu .nav-right.tum{
+        display: inline-block;
+        display: flex;
+    }
+    .menu .nav-right.bottum{
+        display: none;
+    }
+    .car .carousel-caption h1{
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+    .car .carousel-caption {
+        position: absolute;
+        top: 40%;
+        left: 10%;
+        z-index: 10;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        color: #fff;
+        text-align: left;
+        width: 50%;
+        font-family: var(--body-font);
+        transform: translateY(-50%);
+    }
+    .car .carousel-item{
+        overflow: hidden;
+        height: 500px;
+    }
+    .bottom-con::after {
+        content: "";
+        position: absolute;
+        background: rgb(205, 8, 8);
+        clip-path: polygon(20% 1%, 100% 0, 100% 100%, 0% 100%);
+        width: 60%;
+        top: 0;
+        right: 0;
+        bottom:  0px;
+        z-index: 1;
+    }
+}
+@media screen and (max-width: 567px) {
+    .car .carousel-item{
+        overflow: hidden;
+        height: 250px;
+    }
+    .footer .footer-bottom .bottom-right{
+        text-align: center;
+        z-index: 2;
+    }
+}
+img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+#mirror{
+    width: 250px;
+    height: 2500px;
+    background-image: url("/let-check/01.jpg");
+}
